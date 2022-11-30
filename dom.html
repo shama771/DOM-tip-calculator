@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Tip in 5 star hotel</title>
+    
+</head>
+<body>
+
+    <h1>Tip in 5 star hotel</h1>
+    <label >Amount</label> <br>
+    <input type="text" value="2000"> <br><br>
+    <button>Calculator Tip</button>
+    <div class="output"></div>
+    
+   <script >
+
+    let amountBox = document.querySelector("input")
+    // let amount = (amountBOx.value)
+    let btn=document.querySelector("button")
+    let output=document.querySelector(".output")
+    btn.addEventListener("click",calculateTip)
+
+    const tip_percent=10  
+
+    function calculateTip(){
+        let amount = (amountBox.value)
+        let tip=amount * tip_percent/100
+        output.innerHTML= ` hey here is my tip ${tip} to waiter`
+    }
+     
+   </script>
+
+</body>
+</html>
